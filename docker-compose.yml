@@ -30,21 +30,21 @@ services:
     container_name: go_sample_api
     ports:
       - "7070:8080"
-    environment:
-      - DB_HOST=pgdb
-      - DB_PORT=5432
-      - DB_NAME=gosampledb
-      - DB_USER=postgres
-      - DB_PASSWORD=123456
-      - DB_SSLMODE=disable
-      - DB_TIMEZONE=UTC
-      - DB_CONNECT_TIMEOUT=5
-      - JWT_SECRET=verysecret
-      - JWT_ISSUER=example.com
-      - JWT_AUDIENCE=example.com
-      - COOKIE_DOMAIN=localhost
-      - DOMAIN=example.com
-      - API_KEY=b41447e6319d1cd467306735632ba733
+    # environment:
+    #   - DB_HOST=pgdb
+    #   - DB_PORT=5432
+    #   - DB_NAME=gosampledb
+    #   - DB_USER=postgres
+    #   - DB_PASSWORD=123456
+    #   - DB_SSLMODE=disable
+    #   - DB_TIMEZONE=UTC
+    #   - DB_CONNECT_TIMEOUT=5
+    #   - JWT_SECRET=verysecret
+    #   - JWT_ISSUER=example.com
+    #   - JWT_AUDIENCE=example.com
+    #   - COOKIE_DOMAIN=localhost
+    #   - DOMAIN=example.com
+    #   - API_KEY=b41447e6319d1cd467306735632ba733
     depends_on:
       - pgdb
     restart: always
