@@ -29,7 +29,8 @@ func (app *application) routes() http.Handler {
 		r.Get("/demomovies", app.AllDemoMovies)
 
 		// Authenticated routes
-		r.Post("/authenticate", app.authenticate)
+		r.Post("/login", app.login)       // เปลี่ยนจาก /authenticate เป็น /login
+		r.Post("/register", app.register) // เส้นทางใหม่สำหรับการลงทะเบียน
 		r.Get("/refresh", app.refreshToken)
 		r.Get("/logout", app.logout)
 
